@@ -16,7 +16,8 @@
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.20",
