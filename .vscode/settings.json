@@ -1,0 +1,7 @@
+{
+    "javascript.format.enable": false,
+    "prettier.tslintIntegration": true,
+    "typescript.format.enable": false,
+    "prettier.eslintIntegration": true,
+    "editor.formatOnSave": true
+}

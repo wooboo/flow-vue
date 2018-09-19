@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "eg2.tslint",
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "dariofuzinato.vue-peek"
+  ]
+}
