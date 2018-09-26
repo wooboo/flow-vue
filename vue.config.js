@@ -7,10 +7,16 @@ module.exports = {
     modules: true,
     sourceMap: true,
   },
-  pages: glob.sync('./src/flows/*').reduce(function(map, obj) {
-    map[obj.replace(/^.*[\\\/]/, '')] = obj;
-    return map;
-  }, {}),
+  pages: glob.sync('./src/flows/*').reduce(
+    function(map, obj) {
+      map[obj.replace(/^.*[\\\/]/, '') + 'Flow'] = obj;
+      return map;
+    },
+    glob.sync('./src/calculators/*').reduce(function(map, obj) {
+      map[obj.replace(/^.*[\\\/]/, '') + 'Calculator'] = obj;
+      return map;
+    }, {}),
+  ),
   configureWebpack: config => {
     config.output.library = '[name]';
     //config.output.libraryTarget = 'global';
