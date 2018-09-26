@@ -4,27 +4,24 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 
-import MyButton from './MyButton.vue';
+import HelloWorld from './HelloWorld.vue';
 
-storiesOf('components/MyButton', module)
+storiesOf('flows/HelloWorld', module)
   .addDecorator(withKnobs)
   .add('with JSX', () => ({
-    components: { MyButton },
+    components: { HelloWorld },
     render() {
-      return <my-button>With JSX</my-button>;
+      return <hello-world msg={this.msg} />;
     },
     computed: { msg: () => text('message') },
   }))
   .add('with text', () => ({
-    components: { MyButton },
-    template: '<my-button @click="doIt">Hello Button</my-button>',
-    computed: { msg: () => text('message') },
-    methods: {
-      doIt: action('click'),
-    },
+    components: { HelloWorld },
+    template: '<hello-world :msg="msg">Hello Button</hello-world>',
+    computed: { msg: () => text('message', 'asdasdasdasdas asd asd asS') },
   }))
   .add('with some emoji', () => ({
-    components: { MyButton },
-    template: '<my-button>😀 😎 👍 💯</my-button>',
+    components: { HelloWorld },
+    template: '<hello-world :msg="msg">😀 😎 👍 💯</hello-world>',
     computed: { msg: () => text('message') },
   }));
