@@ -11,14 +11,14 @@ storiesOf('flows/HelloWorld', module)
   .add('with JSX', () => ({
     components: { HelloWorld },
     render() {
-      return <hello-world msg={this.msg}>With JSX</hello-world>;
+      return <hello-world msg={this.msg} />;
     },
     computed: { msg: () => text('message') },
   }))
   .add('with text', () => ({
     components: { HelloWorld },
     template: '<hello-world :msg="msg">Hello Button</hello-world>',
-    computed: { msg: () => text('message') },
+    computed: { msg: () => text('message', 'asdasdasdasdas asd asd asS') },
   }))
   .add('with some emoji', () => ({
     components: { HelloWorld },

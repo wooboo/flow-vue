@@ -17,8 +17,11 @@ storiesOf('components/MyButton', module)
   }))
   .add('with text', () => ({
     components: { MyButton },
-    template: '<my-button>Hello Button</my-button>',
+    template: '<my-button @click="doIt">Hello Button</my-button>',
     computed: { msg: () => text('message') },
+    methods: {
+      doIt: action('click'),
+    },
   }))
   .add('with some emoji', () => ({
     components: { MyButton },
