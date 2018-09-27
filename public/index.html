@@ -18,7 +18,7 @@
 
 </body>
 <script>
-    <%= htmlWebpackPlugin.options.chunks[htmlWebpackPlugin.options.chunks.length - 1] %>.default({}).$mount('#app');
+    <%= htmlWebpackPlugin.options.chunks[htmlWebpackPlugin.options.chunks.length - 1] %>.default({ attrs: { msg: 'hello' } }).$mount('#app');
 </script>
 
 </html>
